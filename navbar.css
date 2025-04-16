@@ -1,0 +1,47 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #111;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem;
+}
+
+.navbar li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar li a:hover {
+  color: #fff;
+}
+
+.nav-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.active-link {
+  color: #ff4c4c;
+  font-weight: bold;
+  border-bottom: 2px solid #ff4c4c;
+  padding-bottom: 2px;
+}

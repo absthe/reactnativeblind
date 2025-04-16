@@ -1,0 +1,14 @@
+/* Light Theme */
+body.light {
+    --sidebar-bg: #8c8080;
+    --main-bg: #ffffffa1;
+    --text: #2f2b2bdf;
+  }
+  
+  /* Dark Theme */
+  body.dark {
+    --sidebar-bg: #1e1e2f;
+    --main-bg: #121212;
+    --text: #f5f5f5;
+  }
+  

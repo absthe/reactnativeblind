@@ -1,0 +1,185 @@
+/* Container */
+.quiz-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #106ed2, #ffffff);
+  color: #102a43;
+  padding: 3rem 1rem;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  gap: 2rem;
+}
+
+/* Title */
+.quiz-title {
+  font-size: 2.5rem;
+  color: #2a3f54;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Question */
+.quiz-question {
+  font-size: 1.3rem;
+  color: #1e1e1e;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 800px;
+  z-index: 2;
+}
+
+/* Options */
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.option {
+  background: linear-gradient(145deg, #dcefff, #f3faff);
+  color: #102a43;
+  padding: 14px 22px;
+  border: 2px solid #254355;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(100, 150, 180, 0.1);
+}
+
+.option:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(145deg, #1f8bde, #ffffff);
+  box-shadow: 0 6px 14px rgba(100, 150, 180, 0.2);
+  color: #ffffff;
+  border-color: #2a7be4;
+}
+
+.option.correct {
+  background-color: #A3D9A5;
+  border-color: #3bb273;
+  color: #071739;
+}
+
+.option.incorrect {
+  background-color: #F8A5A5;
+  border-color: #d9534f;
+  color: #071739;
+}
+
+.option.dim {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Feedback */
+.quiz-feedback {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: #43e97b;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Quiz Done */
+.quiz-done {
+  font-size: 1.5rem;
+  color: #106ed2;
+  margin-top: 20px;
+}
+
+/* Results Card */
+.quiz-results {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ddefff;
+  border-radius: 16px;
+  color: #1e1e1e;
+  max-width: 800px;
+}
+
+/* Review */
+.review-card {
+  margin-top: 16px;
+  padding: 14px;
+  background: #d0ebff;
+  border-radius: 12px;
+  color: #102a43;
+  border: 1px solid #254355;
+}
+
+/* Shooting Stars */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(45deg, white, transparent);
+  animation: shoot 2s linear infinite;
+  top: -100px;
+  left: calc(100% * var(--i));
+  opacity: 0.8;
+  z-index: 0;
+  transform: rotate(45deg);
+  animation-delay: calc(var(--i) * 0.5s);
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(-50px, -50px) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Multiple Stars - customized like Library */
+.quiz-container .shooting-star:nth-child(1) {
+  top: 5%;
+  left: -20%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+  background: linear-gradient(to bottom, #f8b400, transparent);
+}
+
+.quiz-container .shooting-star:nth-child(2) {
+  top: 30%;
+  left: -30%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  background: linear-gradient(to bottom, #00f2fe, transparent);
+}
+
+.quiz-container .shooting-star:nth-child(3) {
+  top: 60%;
+  left: -10%;
+  animation-duration: 7s;
+  animation-delay: 4s;
+  background: linear-gradient(to bottom, #a18cd1, transparent);
+}
+
+.quiz-container .shooting-star:nth-child(4) {
+  top: 45%;
+  left: -25%;
+  animation-duration: 5s;
+  animation-delay: 6s;
+  background: linear-gradient(to bottom, #fb7ba2, transparent);
+}
+
+.quiz-container .shooting-star:nth-child(5) {
+  top: 80%;
+  left: -40%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+  background: linear-gradient(to bottom, #43e97b, transparent);
+}

@@ -1,0 +1,156 @@
+/* Container */
+.library-container {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  align-items: start;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #106ed2, #ffffff);
+  color: #1e1e1e;
+  padding: 3rem 1rem;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  gap: 2rem;
+}
+
+/* Title */
+.library-title {
+  font-size: 2.5rem;
+  color: #2a3f54;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* PDF List */
+.pdf-list {
+  max-width: 960px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  z-index: 2;
+}
+
+/* PDF Item */
+.pdf-item {
+  background: linear-gradient(145deg, #dcefff, #f3faff);
+  color: #102a43;
+  padding: 1.4rem 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(100, 150, 180, 0.1);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #254355;
+}
+
+.pdf-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(100, 150, 180, 0.2);
+  background: linear-gradient(145deg, #1f8bde, #ffffff);
+}
+
+.pdf-item.selected {
+  border: 2px solid #2a7be4;
+  background-color: #d0ebff;
+  color: #1e3a5f;
+}
+
+/* Upload Button */
+.upload-btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  background-color: #2a7be4;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.upload-btn:hover {
+  background-color: #1f5dbb;
+  box-shadow: 0 4px 12px rgba(42, 123, 228, 0.4);
+}
+
+/* Shooting Stars - Pseudo Random Effects */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(45deg, white, transparent);
+  animation: shoot 2s linear infinite;
+  top: -100px;
+  left: calc(100% * var(--i));
+  opacity: 0.8;
+  z-index: 0;
+  transform: rotate(45deg);
+  animation-delay: calc(var(--i) * 0.5s);
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(-50px, -50px) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Multiple stars with variations */
+.library-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.library-container .shooting-star:nth-child(1) {
+  top: 5%;
+  left: -20%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+  background: linear-gradient(to bottom, #f8b400, transparent);
+}
+
+.library-container .shooting-star:nth-child(2) {
+  top: 30%;
+  left: -30%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  background: linear-gradient(to bottom, #00f2fe, transparent);
+}
+
+.library-container .shooting-star:nth-child(3) {
+  top: 60%;
+  left: -10%;
+  animation-duration: 7s;
+  animation-delay: 4s;
+  background: linear-gradient(to bottom, #a18cd1, transparent);
+}
+
+.library-container .shooting-star:nth-child(4) {
+  top: 45%;
+  left: -25%;
+  animation-duration: 5s;
+  animation-delay: 6s;
+  background: linear-gradient(to bottom, #fb7ba2, transparent);
+}
+
+.library-container .shooting-star:nth-child(5) {
+  top: 80%;
+  left: -40%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+  background: linear-gradient(to bottom, #43e97b, transparent);
+}

@@ -1,0 +1,31 @@
+/* Help.css */
+
+.help-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* Horizontally center */
+    justify-content: center;     /* Vertically center */
+    min-height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .help-title {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 2rem;
+  }
+  
+  .help-content {
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
+    border: 1px solid #333;
+  }
+  
